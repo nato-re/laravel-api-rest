@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('artist');
-            $table->string('album');
-            $table->integer('duration');
+            $table->string('album')->nullable();
+            $table->integer('duration')->default(0);
             $table->timestamps();
         });
     }
 
-    /**
+    /**\
      * Reverse the migrations.
      */
     public function down(): void

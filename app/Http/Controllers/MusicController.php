@@ -54,8 +54,12 @@ class MusicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Music $music)
+    public function show($id)
     {
+        $music = Music::findOrFail($id);
+        $param = ['music' => $music];
+        $param = compact("music");
+
         return view("musics.show", compact("music"));
     }
 

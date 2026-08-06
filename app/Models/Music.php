@@ -11,7 +11,10 @@ class Music extends Model
     use HasFactory;
 
     protected $fillable = [
-        "name","artist","album","duration",
+        "name",
+        "artist",
+        "album",
+        "duration",
     ];
     protected $table = "musics";
 }

@@ -1,4 +1,4 @@
-<a href="{{ route('musics.create') }}">Criar música</a>
+<a href="}}">Criar música</a>
 <ul>
 
 @foreach ($musics as $music)
