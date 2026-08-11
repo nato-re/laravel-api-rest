@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArtistApiController;
 use App\Http\Controllers\MusicApiController;
 use App\Models\Music;
 use Illuminate\Http\Request;
@@ -17,3 +18,6 @@ Route::delete('/musics/{id}', [MusicApiController::class, 'destroy']);
 Route::put('/musics/{music}', [MusicApiController::class, 'update']);
 
 Route::apiResource('/musics', MusicApiController::class);
+Route::apiResource('/artists', ArtistApiController::class);
+Route::post('/artists', [ArtistApiController::class, 'store']);
+
