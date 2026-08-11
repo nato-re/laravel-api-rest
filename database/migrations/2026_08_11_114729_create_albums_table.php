@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('profile_photo')->default('https://www.duboni.com.br/files/impressao/content22/med/photobooks.jpg');
-            $table->date('2013')->nullable();
+            $table->string('cover_photo')->default('https://www.duboni.com.br/files/impressao/content22/med/photobooks.jpg');
             $table->string('artist');
             $table->timestamps();
         });
