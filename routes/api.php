@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArtistApiController;
+use App\Http\Controllers\AlbumApiController;
 use App\Http\Controllers\MusicApiController;
 use App\Http\Controllers\PlaylistApiController;
 use Illuminate\Http\Request;
@@ -20,3 +21,4 @@ Route::put('/musics/{music}', [MusicApiController::class, 'update']);
 Route::apiResource('/musics', MusicApiController::class);
 Route::apiResource('/playlists', PlaylistApiController::class);
 Route::apiResource('/artists', ArtistApiController::class);
+Route::apiResource('/albuns', AlbumApiController::class);
