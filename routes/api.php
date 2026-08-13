@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ArtistApiController;
 use App\Http\Controllers\MusicApiController;
-use App\Models\Music;
+use App\Http\Controllers\PlaylistApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,4 +18,5 @@ Route::delete('/musics/{id}', [MusicApiController::class, 'destroy']);
 Route::put('/musics/{music}', [MusicApiController::class, 'update']);
 
 Route::apiResource('/musics', MusicApiController::class);
+Route::apiResource('/playlists', PlaylistApiController::class);
 Route::apiResource('/artists', ArtistApiController::class);
